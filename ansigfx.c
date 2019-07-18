@@ -22,10 +22,6 @@ void ScreenSetBackGroundColour(int colour) {
   printf("\033[0;%dm", colour);
 }
 
-void ScreenSetBlink(void) {
-  printf("\033[0;%dm", colour);  
-}
-
 void ScreenReset() {
   printf("\033[0m");
 }
