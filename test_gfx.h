@@ -11,5 +11,6 @@
 
 int test_gfx(void);
 int test_color(void);
+int test_mandel(void);
   
 #endif
