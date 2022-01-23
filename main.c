@@ -11,6 +11,7 @@
 int main (void) {
 
   test_gfx();
-  
+  test_color();
+  test_mandel();
   exit(1);
 }

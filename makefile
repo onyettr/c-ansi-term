@@ -63,7 +63,8 @@ RUBY			= 	ruby
 #
 OBJS  		     	=	$(OBJECT_DIR)/main.o 		\
 		       		$(OBJECT_DIR)/test_gfx.o	\
-				$(OBJECT_DIR)/test_colors.o
+				$(OBJECT_DIR)/test_colors.o	\
+				$(OBJECT_DIR)/test_mandel.o
 
 LIBS  		     	= libansigfx.a
 
@@ -99,6 +100,8 @@ $(OBJECT_DIR)/test_gfx.o:	test_gfx.c
 	$(CC) $(CFLAGS) $(DEBUG) test_gfx.c -o $(OBJECT_DIR)/test_gfx.o
 $(OBJECT_DIR)/test_colors.o:	test_colors.c
 	$(CC) $(CFLAGS) $(DEBUG) test_colors.c -o $(OBJECT_DIR)/test_colors.o
+$(OBJECT_DIR)/test_mandel.o:	test_mandel.c
+	$(CC) $(CFLAGS) $(DEBUG) test_mandel.c -o $(OBJECT_DIR)/test_mandel.o
 
 #
 # Unity test harness
@@ -151,6 +154,7 @@ clean:
 	rm -f libansigfx.a
 	rm -f $(OBJECT_DIR)/test_gfx.o
 	rm -f $(OBJECT_DIR)/test_colors.o
+	rm -f $(OBJECT_DIR)/test_mandel.o
 	rm -f $(OBJECT_DIR)/main.o
 	rm -f $(OBJECT_DIR)/unity.o
 	rm -f $(OBJECT_DIR)/unitytest.o
